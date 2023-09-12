@@ -15,3 +15,24 @@ go get -u github.com/LeandroMauro/greetings
 ## Uso
 
 Aqui tienes un ejemplo de como utilizar el paquete en tu código....
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/LeandroMauro/greetings"
+)
+
+func main() {
+	message, err := greetings.Hello("Alex")
+
+	if err != nil {
+		fmt.Println("Ocurrió un error: ", err)
+		return
+	}
+
+	fmt.Println(message)
+}
+```
